@@ -2,7 +2,7 @@ package be.cegeka.ventouris.visitor.infanterie;
 
 import be.cegeka.ventouris.visitor.enemies.EnemyVisitor;
 
-public class Captain implements Infanterie {
+public class Captain implements Infantry {
 
     private int attackPoints = 10;
     private String offensiveWord = "fill in anything that comes to mind";
@@ -48,6 +48,6 @@ public class Captain implements Infanterie {
 
     @Override
     public void defendAgainst(EnemyVisitor visitor) {
-
+        visitor.attack(this);
     }
 }
